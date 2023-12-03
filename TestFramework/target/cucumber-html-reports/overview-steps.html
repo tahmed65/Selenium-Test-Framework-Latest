@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber Test Report</td>
+        <td>1</td>
+      <td>30 Sep 2023, 12:42</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_click_on_create_account_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="20047531700">20.047</td>
+              <td class="duration" data-value="20047531700">20.047</td>
+              <td class="duration" data-value="20047531700">20.047</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_click_on_sign_in_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="867931500">0.867</td>
+              <td class="duration" data-value="867931500">0.867</td>
+              <td class="duration" data-value="867931500">0.867</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_fill_up_email_address_filed()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_fill_up_fist_name_filed()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_fill_up_last_name_field()</td>
+              <td>1</td>
+              <td class="duration" data-value="1331800">0.001</td>
+              <td class="duration" data-value="1331800">0.001</td>
+              <td class="duration" data-value="1331800">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_fill_up_password_filed()</td>
+              <td>1</td>
+              <td class="duration" data-value="1042700">0.001</td>
+              <td class="duration" data-value="1042700">0.001</td>
+              <td class="duration" data-value="1042700">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_navigate_to_macys_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="3557987300">3.557</td>
+              <td class="duration" data-value="3557987300">3.557</td>
+              <td class="duration" data-value="3557987300">3.557</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_select_the_birth_day_filed()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.MacysAccountCreationStepDef.user_select_the_birth_month_filed()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.afterScenario(io.cucumber.java.Scenario)</td>
+              <td>4</td>
+              <td class="duration" data-value="845466825">0.845</td>
+              <td class="duration" data-value="845466825">1.201</td>
+              <td class="duration" data-value="3381867300">3.381</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.setUpBrowser()</td>
+              <td>4</td>
+              <td class="duration" data-value="1510929550">1.510</td>
+              <td class="duration" data-value="1510929550">1.683</td>
+              <td class="duration" data-value="6043718200">6.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_click_on_create_new_account_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="68995066">0.068</td>
+              <td class="duration" data-value="68995066">0.086</td>
+              <td class="duration" data-value="206985200">0.206</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_click_on_custom_gender_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="116956900">0.116</td>
+              <td class="duration" data-value="116956900">0.116</td>
+              <td class="duration" data-value="116956900">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_click_on_femal_gender_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="52234000">0.052</td>
+              <td class="duration" data-value="52234000">0.052</td>
+              <td class="duration" data-value="52234000">0.052</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_click_on_male_gender_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="49984200">0.049</td>
+              <td class="duration" data-value="49984200">0.049</td>
+              <td class="duration" data-value="49984200">0.049</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_enter_stong_password_as_per_requirement()</td>
+              <td>3</td>
+              <td class="duration" data-value="110749633">0.110</td>
+              <td class="duration" data-value="110749633">0.139</td>
+              <td class="duration" data-value="332248900">0.332</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_enter_their_first_name()</td>
+              <td>3</td>
+              <td class="duration" data-value="1248296366">1.248</td>
+              <td class="duration" data-value="1248296366">2.024</td>
+              <td class="duration" data-value="3744889100">3.744</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_enter_their_last_name()</td>
+              <td>3</td>
+              <td class="duration" data-value="66610500">0.066</td>
+              <td class="duration" data-value="66610500">0.070</td>
+              <td class="duration" data-value="199831500">0.199</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_enter_their_valid_email_address()</td>
+              <td>3</td>
+              <td class="duration" data-value="92596533">0.092</td>
+              <td class="duration" data-value="92596533">0.104</td>
+              <td class="duration" data-value="277789600">0.277</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_navigate_to_facebook_home_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="2673788633">2.673</td>
+              <td class="duration" data-value="2673788633">3.298</td>
+              <td class="duration" data-value="8021365900">8.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_re_enter_their_valid_email_address()</td>
+              <td>3</td>
+              <td class="duration" data-value="94067033">0.094</td>
+              <td class="duration" data-value="94067033">0.119</td>
+              <td class="duration" data-value="282201100">0.282</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_select_birth_day_from_the_drop_down()</td>
+              <td>3</td>
+              <td class="duration" data-value="85270000">0.085</td>
+              <td class="duration" data-value="85270000">0.092</td>
+              <td class="duration" data-value="255810000">0.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_select_birth_month_from_the_drop_down()</td>
+              <td>3</td>
+              <td class="duration" data-value="116745666">0.116</td>
+              <td class="duration" data-value="116745666">0.156</td>
+              <td class="duration" data-value="350237000">0.350</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.facebook.stepDef.SingUpAndSingInStepDef.user_select_birth_year_from_the_drop_down()</td>
+              <td>3</td>
+              <td class="duration" data-value="86288733">0.086</td>
+              <td class="duration" data-value="86288733">0.093</td>
+              <td class="duration" data-value="258866200">0.258</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>50</td>
+            <td class="duration">0.961</td>
+            <td class="duration">20.047</td>
+            <td class="duration">48.050</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
